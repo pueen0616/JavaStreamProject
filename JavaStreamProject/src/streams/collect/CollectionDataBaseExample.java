@@ -1,5 +1,6 @@
 package streams.collect;
 
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +24,7 @@ public class CollectionDataBaseExample {
 		List<Employee> empList = null;
 		try {
 			empList = EmpDAO.getEmpList();
-		} catch (SaslException e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 

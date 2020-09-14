@@ -11,10 +11,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class EmpDAO {
-	public static ObservableList<Employee> getEmpList() throws SaslException {
+	public static ObservableList<Employee> getEmpList() throws SQLException {
 		Connection conn = ConnectionDB.getDB();
 		
-		String sql = "select * from employees";
+		String sql = "select * from emp_temp";
 		
 		ObservableList<Employee> list = FXCollections.observableArrayList();
 		try {

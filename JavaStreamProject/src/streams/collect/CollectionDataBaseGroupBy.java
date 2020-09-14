@@ -1,5 +1,6 @@
 package streams.collect;
 
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,7 @@ public class CollectionDataBaseGroupBy {
 		List<Employee> empList = null;
 		try {
 			empList = EmpDAO.getEmpList();
-		} catch (SaslException e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 
